@@ -1,0 +1,682 @@
+
+
+@media screen and (min-width: 400px) and (max-width: 599px) {
+
+    :root {
+        --color-fondo: #242635;
+        --color-H1: #34b0be;
+        --color-h2: #ffffff;
+        --color-p: #D1CECA;
+        --color-fondo2: #3d465e;
+
+    }
+
+
+    * {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+        font-family: 'Montserrat';
+    }
+
+    body {
+        background-color: var(--color-fondo);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, auto);
+    }
+
+    header {
+        grid-column: 1/6;
+        grid-row: 1/2;
+        width: 100%;
+        height: 90px;
+
+    }
+/*Empieza el NAVEGADOR----------------------------------------------------*/
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: .5rem 1.25rem;
+        height: 55px;
+
+    }
+
+
+    .hamburg-btn {
+        color: var(--color-h2);
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
+    .nav-menu li a {
+        color: var(--color-h2);
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 600;
+    }
+
+    .nav-menu li a.active,
+    .nav-menu li a:hover {
+        color: var(--color-H1);
+        transition: .2s;
+    }
+
+
+    input#check {
+        visibility: hidden;
+    }
+
+    input#check ~ ul {
+        background-color: var(--color-fondo);
+        list-style: none;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        top: 55px;
+        right: 100%;
+        transition: all 700ms step-start;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding: 2rem 1rem;
+        z-index: 1;
+        text-decoration: none;
+    }
+
+    input#check:checked ~ ul {
+        right: 0;
+    }
+/*Termina el NAVEGADOR  y empieza PORTADA-----------------------------------------------------------------*/
+
+    .wallpaper {
+
+        grid-column: 1/6;
+        grid-row: 2/3;
+        position: relative;
+        display: grid;
+        grid-template-columns: auto auto 275px auto auto;
+        grid-template-rows: 200px auto auto;
+        align-items: center;
+
+
+    }
+
+    .wallpaper .item-1 {
+        grid-column: 1/4;
+        grid-row: 1/2;
+        position: absolute;
+        margin-left: 8px;
+        margin-top: -100px;
+
+    }
+
+
+
+    .wallpaper .item-1 h1 {
+        font-size: 45px;
+        color: var(--color-H1);
+        font-weight: 600;
+    }
+
+    .wallpaper .item-1 hr {
+        background-color: var(--color-h2);
+    }
+
+
+    .wallpaper .item-1 h2 {
+        font-size: 28px;
+        color: var(--color-h2);
+        font-weight: normal;
+    }
+
+
+    .wallpaper .item-2 {
+        border-radius: 100%;
+        background: var(--color-fondo2);
+        width: 290px;
+        height: 290px;
+        grid-column: 3/4;
+        grid-row: 1/6;
+        align-items: center;
+        margin-top: 9px;
+    }
+
+    .wallpaper .item-3 {
+
+        position: absolute;
+        grid-column: 3/5;
+        grid-row: 1/2;
+        margin-top: -150px;
+        margin-left: 198px;
+        color: var(--color-H1);
+        font-size: 28px;
+
+    }
+
+    .wallpaper .item-3 h3 {
+        font-size: 45px;
+    }
+
+    .wallpaper .item-3 h4 {
+        font-size: 28px;
+        color: var(--color-h2);
+        font-weight: normal;
+        margin-top: -5px;
+        margin-bottom: 5px;
+    }
+
+    .redes {
+        margin-left: -70px;
+        grid-column: 3/3;
+        grid-row: 1/2;
+        margin-left: 198px;
+        margin-top: -40px;
+        display: flex;
+        gap: 12px;
+
+    }
+
+    .redes i {
+        color: black;
+        background-color: var(--color-p);
+        border-radius: 50%;
+        padding: 8px;
+
+    }
+
+
+
+    #photo {
+        max-width: 220px;
+        min-height: 220px;
+        grid-column: 3/4;
+        grid-row: 1/6;
+        margin-left: 42px;
+        margin-top: 44px;
+    }
+
+
+    .companies {
+
+        grid-column: 1/6;
+        grid-row: 3/4;
+        width: 100%;
+        height: 100px;
+        display: grid;
+        grid-template-columns: repeat(9, auto);
+        grid-template-rows: repeat(3, 50px);
+    }
+
+    .companies-box i {
+        background-color: var(--color-p);
+        padding: 10px;
+        width: auto;
+        font-size: 32px;
+        border-radius: 15%;
+        margin: auto;
+    }
+
+    .companies .companies-box {
+        grid-column-start: 2;
+        grid-column-end: 9;
+        background-color: var(--color-fondo2);
+        width: 100%;
+        height: 75px;
+        border-radius: 10px;
+        align-content: center;
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        grid-template-rows: repeat(2, auto);
+    }
+
+    #google {
+        background-color: var(--color-p);
+        border-radius: 5px;
+        grid-column: 3;
+        grid-row: 1;
+        margin: auto;
+
+
+    }
+
+    #amazon {
+        color: black;
+        background-color: var(--color-p);
+        border-radius: 5px;
+        grid-column: 4;
+        grid-row: 1;
+        margin: auto;
+
+
+    }
+
+    #spotify {
+        background-color: var(--color-p);
+        border-radius: 5px;
+        grid-column: 5;
+        grid-row: 1;
+        margin: auto;
+    }
+
+    /*Termina PORTADA y empieza ACERCA DE MI------------------------------------------------------------------------------*/
+
+    article {
+        grid-column: 1/6;
+        grid-row: 4/5;
+        width: 100%;
+        height: 200px;
+
+    }
+
+    article>h3 {
+        color: var(--color-H1);
+        font-size: 32px;
+        font-weight: 400;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    article>p {
+        color: var(--color-p);
+        font-size: 16px;
+        font-weight: normal;
+        text-align: center;
+        margin: 0 16px;
+
+    }
+
+/*Termina ACERCA DE MI y empieza MIS SERVICIOS-------------------------------------------*/
+
+    .aside1 {
+        grid-column: 1/6;
+        grid-row: 5;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+    }
+
+    .aside1 h3 {
+        color: var(--color-H1);
+        font-size: 32px;
+        font-weight: 400;
+        text-align: center;
+        grid-column: 3/4;
+        grid-column: 3/4;
+        margin-bottom: 40px;
+
+
+    }
+
+    .aside1 .servicios {
+
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        grid-column: 2/5;
+        grid-row: 2/5;
+        display: flex;
+        display: grid;
+        grid-template-columns: 240px 15% 240px 15% 240px 15%;
+    }
+
+
+    .aside1 .servicios::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .aside1 .servicios::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+
+    .webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .aside1 img {
+
+        position: relative;
+        margin: 15% auto;
+        width: 100px;
+        height: 100px;
+        display: block;
+    }
+
+
+    .service1 {
+        grid-column: 1/1;
+        grid-row: 2;
+        width: 240px;
+        height: 300px;
+        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat top white;
+        border-radius: 3%;
+    }
+
+    .service2 {
+        grid-column: 3/3;
+        grid-row: 2;
+        width: 240px;
+        height: 300px;
+        border-radius: 3%;
+        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat top white;
+    }
+
+    .service3 {
+        grid-column: 5/5;
+        grid-row: 2;
+        width: 240px;
+        height: 300px;
+        border-radius: 3%;
+        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat top white;
+    }
+
+    .service1 h6, .service2 h6, .service3 h6{
+        color: var(--color-p);
+        position: relative;
+        text-align: center;
+        font-size: 14px;
+        top: 12px;
+    }
+
+    .service1 h4, .service2 h4, .service3 h4{
+        color: black;
+        position: relative;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 150px;
+        top: 9px;
+    }
+
+/*Termina MIS SERVICIOS y empieza MIS HABILIDADES------------------------------------------*/
+
+    .aside2 {
+        grid-column: 1/6;
+        grid-row: 6/7;
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(12, auto);
+    }
+
+
+    .aside2 h3 {
+        grid-column: 3/4;
+        font-size: 32px;
+        font-weight: 400;
+        color: var(--color-H1);
+        text-align: center;
+        margin-bottom: 70px;
+        margin-top: 40px;
+    }
+
+
+
+    .skill-bars {
+        grid-column: 3/4;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(10, auto);
+    }
+
+
+    .skill1 {
+        grid-column: 3/4;
+        grid-row: 3/4;
+        color: var(--color-h2);
+    }
+    .skill2 {
+        grid-column: 3/4;
+        grid-row: 5/6;
+        color: var(--color-h2);
+    }
+    .skill3 {
+        grid-column: 3/4;
+        grid-row: 7/8;
+        color: var(--color-h2);
+    }
+
+
+
+    .porcentaje1 {
+
+        grid-column: 3/4;
+        grid-row: 3/4;
+        color: var(--color-H1);
+        margin-left: 180px;
+    }
+    .porcentaje2 {
+        grid-column: 3/4;
+        grid-row: 5/6;
+        color: var(--color-H1);
+        margin-left: 200px;
+    }
+    .porcentaje3 {
+        grid-column: 3/4;
+        grid-row: 7/8;
+        color: var(--color-H1);
+        margin-left: 145px;
+    }
+
+
+
+
+    .progress-bar1 {
+        grid-column: 3/4;
+        grid-row: 4/5;
+        width: 325px;
+        height: 20px;
+        background-color: var(--color-p);
+        border-radius: 1.5em;
+        margin-bottom: 60px;
+        position: relative;
+    }
+    .progress-bar2 {
+        grid-column: 3/4;
+        grid-row: 6/7;
+        width: 325px;
+        height: 20px;
+        background-color: var(--color-p);
+        border-radius: 1.5em;
+        margin-bottom: 60px;
+        position: relative;
+    }
+    .progress-bar3 {
+        grid-column: 3/4;
+        grid-row: 8/9;
+        width: 325px;
+        height: 20px;
+        background-color: var(--color-p);
+        border-radius: 1.5em;
+        margin-bottom: 60px;
+        position: relative;
+    }
+
+
+
+    .progress-bar1::before, .progress-bar2::before, .progress-bar3::before {
+        content: attr(data-label);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: .01em;
+        top: .01em;
+        bottom: .01rem;
+        width: calc(var(--width, 0)*1%);
+        min-width: 2rem;
+        max-width: calc(100%-1rem);
+        background-color: var(--color-H1);
+        border-radius: 1em;
+        padding-left: 1em;
+    }
+
+/*Termina MIS HABILIDADES y empieza MI PORTAFILIO--------------------------------*/
+
+    .aside3 {
+        grid-column: 1/6;
+        grid-row: 7/8;
+        display: grid;
+        grid-template-columns: repeat(5, auto);
+        grid-template-rows: repeat(5, auto);
+    }
+
+
+    .aside3 h3 {
+        color: var(--color-H1);
+        text-align: center;
+        font-size: 32px;
+        font-weight: 400;
+        grid-column: 3/4;
+        margin-bottom: 40px;
+    }
+
+    .aside3 .briefcase {
+        grid-column: 1/6;
+        grid-row: 2/5;
+        overflow-x: scroll;
+        scroll-snap-type: x proximity;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(6, auto);
+    }
+
+    .aside3 .briefcase::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .aside3 .briefcase::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+    }
+
+    .aside3 .briefcase::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .aside3 .briefcase ul {
+        grid-column: 1/6;
+        grid-row: 2/6;
+        display: flex;
+        margin-left: 5px;
+        animation: cambio 3s infinite alternate;
+
+
+    }
+
+    .briefcase li {
+        list-style: none;
+        padding: 10px;
+    }
+    .briefcase li #experiencia1 {
+        width: 300px;
+    }
+    .briefcase li #experiencia2 {
+        width: 300px;
+    }
+    .briefcase li #experiencia3 {
+        width: 300px;
+    }
+/*Termina MI PORTAFOLIO y empieza CONTACTO--------------------------------*/
+
+    .aside4 {
+        grid-column: 1/7;
+        grid-row: 8/9;
+        width: 100%;
+        margin-top: 40px;
+        margin-bottom: 40px;
+    }
+
+    .aside4 h3 {
+        grid-column: 3/4;
+        grid-row: 1/2;
+        font-size: 32px;
+        font-weight: 400;
+        color: #34B0BE;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .aside4 .asidecont4 {
+        grid-column: 1/6;
+        grid-row: 8/9;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto;
+    }
+
+    .iconphone img,
+    .iconemail img {
+
+        width: 100px;
+        height: 100px;
+        position: relative;
+    }
+
+
+    .iconphone {
+        grid-column: 3/4;
+        grid-row: 1;
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border-radius: 5%;
+        position: relative;
+        text-align: center;
+        background: url(/assest/Vectores/Ellipse\ 14.svg) no-repeat white;
+        background-position: 0 -50px;
+        background-size: 100% 100%;
+    }
+
+    .aside4 .iconphone h6 {
+        color: #D1ceca;
+        position: relative;
+        text-align: center;
+    }
+
+    .iconemail {
+        grid-column: 4/5;
+        grid-row: 2;
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        margin-left: auto;
+        border-radius: 5%;
+        position: relative;
+        text-align: center;
+        background: url(/assest/Vectores/Ellipse\ 14.svg) no-repeat white;
+        background-position: 0 -50px;
+        background-size: 100% 100%;
+    }
+
+
+    .aside4 .iconemail h6 {
+        position: relative;
+        width: 100%;
+        color: #D1ceca;
+        text-align: center;
+    }
+/*Termina CONTACTO y emieza el FOOTER--------------------------------------*/
+
+    footer {
+        grid-column: 1/6;
+        grid-row: 9/10;
+        width: 100%;
+        height: 50px;
+        background-color: var(--color-fondo2);
+        text-align: center;
+        align-content: center;
+        align-items: center;
+        color: var(--color-H1);
+
+    }
+
+    footer > h6 {
+        margin-top: 15px;
+    }
+}

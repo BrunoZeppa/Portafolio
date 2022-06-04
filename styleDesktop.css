@@ -1,6 +1,7 @@
+@media screen and (min-width: 800px)
 
-
-@media screen and (min-width: 400px) and (max-width: 599px) {
+/*and (max-width: 1600px) */
+    {
 
     :root {
         --color-fondo: #242635;
@@ -11,12 +12,9 @@
 
     }
 
-
     * {
         margin: 0;
         padding: 0;
-        text-decoration: none;
-        list-style: none;
         box-sizing: border-box;
         font-family: 'Montserrat';
     }
@@ -28,35 +26,27 @@
         grid-template-rows: repeat(8, auto);
     }
 
+
     header {
         grid-column: 1/6;
         grid-row: 1/2;
         width: 100%;
         height: 90px;
-
     }
-/*Empieza el NAVEGADOR----------------------------------------------------*/
 
+    /*Empieza la NAVEGACION--------------------------*/
     nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: flex-end;
         align-items: center;
         padding: .5rem 1.25rem;
         height: 55px;
-
-    }
-
-
-    .hamburg-btn {
-        color: var(--color-h2);
-        font-size: 1.5rem;
-        cursor: pointer;
     }
 
     .nav-menu li a {
         color: var(--color-h2);
-        font-size: 16px;
-        text-transform: uppercase;
+        font-size: 14px;
+        text-transform: capitalize;
         font-weight: 600;
     }
 
@@ -66,12 +56,12 @@
         transition: .2s;
     }
 
-
     input#check {
         visibility: hidden;
+        text-decoration: none;
     }
 
-    input#check ~ ul {
+    input#check~ul {
         background-color: var(--color-fondo);
         list-style: none;
         position: fixed;
@@ -79,47 +69,80 @@
         height: 100%;
         top: 55px;
         right: 100%;
-        transition: all 700ms step-start;
+        transition: all 300ms linear;
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 3rem;
+        gap: 2rem;
         padding: 2rem 1rem;
         z-index: 1;
         text-decoration: none;
+
     }
 
-    input#check:checked ~ ul {
+    input#check:checked~ul {
         right: 0;
     }
-/*Termina el NAVEGADOR  y empieza PORTADA-----------------------------------------------------------------*/
+
+
+
+
+    @media only screen and (min-width: 768px) {
+        label {
+            display: none;
+        }
+
+        input#check~ul {
+            position: static;
+            background-color: transparent;
+            display: flex;
+            flex-direction: row;
+            height: auto;
+            justify-content: flex-end;
+            transition: none;
+            text-decoration: none;
+        }
+
+        nav>ul>li {
+            display: inline-block;
+        }
+
+        nav>ul>li>a {
+            color: var(--color-h2);
+            text-decoration: none;
+            padding: .5rem 1rem;
+            border-bottom: 2px solid transparent;
+            transition: border-color .3s linear;
+        }
+
+        nav>ul>li>a:hover {
+            border-color: var(--color-H1);
+        }
+    }
+
+    /*Termina NAVEGACION empieza PORTADA--------------------------*/
+
 
     .wallpaper {
-
         grid-column: 1/6;
         grid-row: 2/3;
         position: relative;
         display: grid;
-        grid-template-columns: auto auto 275px auto auto;
+        grid-template-columns: auto auto 450px auto auto;
         grid-template-rows: 200px auto auto;
         align-items: center;
-
-
     }
+
 
     .wallpaper .item-1 {
-        grid-column: 1/4;
+        grid-column: 2/4;
         grid-row: 1/2;
         position: absolute;
-        margin-left: 8px;
-        margin-top: -100px;
-
+        margin-top: -20px;
     }
 
-
-
     .wallpaper .item-1 h1 {
-        font-size: 45px;
+        font-size: 85px;
         color: var(--color-H1);
         font-weight: 600;
     }
@@ -128,150 +151,259 @@
         background-color: var(--color-h2);
     }
 
-
     .wallpaper .item-1 h2 {
-        font-size: 28px;
+        font-size: 38px;
         color: var(--color-h2);
         font-weight: normal;
     }
 
 
+
+
+
     .wallpaper .item-2 {
         border-radius: 100%;
         background: var(--color-fondo2);
-        width: 290px;
-        height: 290px;
+        width: 450px;
+        height: 450px;
         grid-column: 3/4;
         grid-row: 1/6;
         align-items: center;
         margin-top: 9px;
     }
 
-    .wallpaper .item-3 {
 
+
+
+
+    .wallpaper .item-3 {
         position: absolute;
         grid-column: 3/5;
         grid-row: 1/2;
-        margin-top: -150px;
-        margin-left: 198px;
+        margin-top: -100px;
+        margin-left: 370px;
         color: var(--color-H1);
-        font-size: 28px;
-
     }
 
     .wallpaper .item-3 h3 {
-        font-size: 45px;
+        font-size: 60px;
     }
 
     .wallpaper .item-3 h4 {
-        font-size: 28px;
+        font-size: 38px;
         color: var(--color-h2);
         font-weight: normal;
-        margin-top: -5px;
-        margin-bottom: 5px;
+        margin-top: -9px;
+        margin-bottom: 7px;
     }
 
+
+
+
     .redes {
-        margin-left: -70px;
         grid-column: 3/3;
         grid-row: 1/2;
-        margin-left: 198px;
-        margin-top: -40px;
+        margin-left: 370px;
+        margin-top: 40px;
         display: flex;
-        gap: 12px;
-
+        gap: 20px;
     }
 
     .redes i {
         color: black;
         background-color: var(--color-p);
         border-radius: 50%;
-        padding: 8px;
-
+        padding: 14px;
+        font-size: 20px;
     }
-
 
 
     #photo {
-        max-width: 220px;
-        min-height: 220px;
+        width: 340px;
         grid-column: 3/4;
         grid-row: 1/6;
-        margin-left: 42px;
-        margin-top: 44px;
+        margin-left: 90px;
+        margin-top: 15px;
     }
 
+
+    @media screen and (min-width: 1000px) {
+
+        .nav-menu li a.active,
+        .nav-menu li a:hover {
+            color: var(--color-H1);
+            transition: .2s;
+        }
+
+        .wallpaper {
+            grid-column: 1/6;
+            grid-row: 2/3;
+            position: relative;
+            display: grid;
+            grid-template-columns: auto auto 450px auto auto;
+            grid-template-rows: 200px auto auto;
+            align-items: center;
+        }
+
+
+
+        .wallpaper .item-1 {
+            grid-column: 2/3;
+            grid-row: 1/2;
+            position: absolute;
+            margin-top: 10px;
+        }
+
+        .wallpaper .item-1 h1 {
+            font-size: 100px;
+            color: var(--color-H1);
+            font-weight: 600;
+        }
+
+        .wallpaper .item-1 hr {
+            background-color: var(--color-h2);
+        }
+
+        .wallpaper .item-1 h2 {
+            font-size: 50px;
+            color: var(--color-h2);
+            font-weight: normal;
+        }
+
+
+
+
+
+        .wallpaper .item-2 {
+            border-radius: 100%;
+            background: var(--color-fondo);
+            width: 450px;
+            height: 450px;
+            grid-column: 3/5;
+            grid-row: 1/6;
+            align-items: center;
+            margin-top: 9px;
+        }
+
+
+
+
+
+        .wallpaper .item-3 {
+            position: absolute;
+            grid-column: 3/5;
+            grid-row: 1/2;
+            margin-top: -80px;
+            margin-left: 370px;
+            color: var(--color-H1);
+            font-size: 50px;
+        }
+
+        .wallpaper .item-3 h3 {
+            font-size: 60px;
+        }
+
+        .wallpaper .item-3 h4 {
+            font-size: 50px;
+            color: var(--color-h2);
+            font-weight: normal;
+            margin-top: -7px;
+        }
+
+        .redes {
+            grid-column: 3/3;
+            grid-row: 1/2;
+            margin-left: 370px;
+            margin-top: 90px;
+            display: flex;
+        }
+
+
+        #photo {
+
+            width: 240px;
+            grid-column: 3/4;
+            grid-row: 1/6;
+            margin-left: 120px;
+            margin-top: 15px;
+        }
+
+    }
 
     .companies {
-
         grid-column: 1/6;
         grid-row: 3/4;
-        width: 100%;
-        height: 100px;
         display: grid;
-        grid-template-columns: repeat(9, auto);
-        grid-template-rows: repeat(3, 50px);
+        grid-template-columns: repeat(10, auto);
+        grid-template-rows: repeat(3, auto);
     }
 
+    .companies .companies-box {
+        grid-column: 4/8;
+        grid-row: 1/7;
+        background-color: var(--color-fondo2);
+        height: 100px;
+        border-radius: 10px;
+    }
+    .companies-box {
+        grid-row: 2;
+        display: grid;
+        grid-template-columns: repeat(7, auto);
+        grid-template-rows: repeat(4, auto);
+        text-align: center;
+        align-content: center;
+    }
     .companies-box i {
         background-color: var(--color-p);
         padding: 10px;
         width: auto;
-        font-size: 32px;
+        font-size: 52px;
         border-radius: 15%;
         margin: auto;
     }
 
-    .companies .companies-box {
-        grid-column-start: 2;
-        grid-column-end: 9;
-        background-color: var(--color-fondo2);
-        width: 100%;
-        height: 75px;
-        border-radius: 10px;
-        align-content: center;
-        display: grid;
-        grid-template-columns: repeat(7, auto);
-        grid-template-rows: repeat(2, auto);
-    }
-
     #google {
-        background-color: var(--color-p);
+        width: 93px;
+        height: 70px;
+        background-color: #D1ceca;
         border-radius: 5px;
         grid-column: 3;
-        grid-row: 1;
+        grid-row: 4;
         margin: auto;
-
-
     }
 
     #amazon {
-        color: black;
-        background-color: var(--color-p);
+        width: 93px;
+        height: 70px;
+        background-color: #D1ceca;
         border-radius: 5px;
         grid-column: 4;
-        grid-row: 1;
+        grid-row: 4;
         margin: auto;
-
-
     }
 
     #spotify {
-        background-color: var(--color-p);
+        width: 93px;
+        height: 70px;
+        background-color: #D1ceca;
         border-radius: 5px;
         grid-column: 5;
-        grid-row: 1;
+        grid-row: 4;
         margin: auto;
     }
 
-    /*Termina PORTADA y empieza ACERCA DE MI------------------------------------------------------------------------------*/
+    /*Termina PORTADA empieza ACERCA DE MI--------------------------------*/
 
     article {
         grid-column: 1/6;
         grid-row: 4/5;
         width: 100%;
         height: 200px;
-
+        position: relative;
+        display: grid;
+        top: 35px;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(8, auto);
     }
 
     article>h3 {
@@ -280,6 +412,8 @@
         font-weight: 400;
         text-align: center;
         margin-bottom: 40px;
+        grid-column: 2/5;
+        grid-row: 1/2;
     }
 
     article>p {
@@ -287,11 +421,9 @@
         font-size: 16px;
         font-weight: normal;
         text-align: center;
-        margin: 0 16px;
-
+        grid-column: 2/5;
+        grid-row: 2/3;
     }
-
-/*Termina ACERCA DE MI y empieza MIS SERVICIOS-------------------------------------------*/
 
     .aside1 {
         grid-column: 1/6;
@@ -307,40 +439,16 @@
         font-weight: 400;
         text-align: center;
         grid-column: 3/4;
-        grid-column: 3/4;
         margin-bottom: 40px;
-
-
     }
 
     .aside1 .servicios {
-
-        overflow-x: scroll;
-        scroll-snap-type: x mandatory;
         grid-column: 2/5;
         grid-row: 2/5;
         display: flex;
-        display: grid;
-        grid-template-columns: 240px 15% 240px 15% 240px 15%;
-    }
-
-
-    .aside1 .servicios::-webkit-scrollbar {
-        width: 12px;
-    }
-
-    .aside1 .servicios::-webkit-scrollbar-track {
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
-        border-radius: 10px;
-    }
-
-    .webkit-scrollbar-thumb {
-        border-radius: 10px;
-        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
     }
 
     .aside1 img {
-
         position: relative;
         margin: 15% auto;
         width: 100px;
@@ -348,32 +456,39 @@
         display: block;
     }
 
-
     .service1 {
-        grid-column: 1/1;
+        grid-column: 1/3;
         grid-row: 2;
-        width: 240px;
-        height: 300px;
-        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat top white;
+        margin: auto;
+        width: 230px;
+        height: 260px;
+        background: url(/portafolio/Ellipse\ 14.svg) no-repeat top white;
         border-radius: 3%;
+        text-align: center;
     }
 
+
     .service2 {
-        grid-column: 3/3;
+        grid-column: 2/3;
         grid-row: 2;
-        width: 240px;
-        height: 300px;
+        margin: auto;
+        width: 230px;
+        height: 260px;
+        background: url(/portafolio/Ellipse\ 14.svg) no-repeat top white;
         border-radius: 3%;
-        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat top white;
+        background-color: white;
     }
 
     .service3 {
-        grid-column: 5/5;
+
+        grid-column: 3/4;
         grid-row: 2;
-        width: 240px;
-        height: 300px;
+        margin: auto;
+        width: 230px;
+        height: 260px;
+        background: url(/portafolio/Ellipse\ 14.svg) no-repeat top white;
         border-radius: 3%;
-        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat top white;
+        background-color: white;
     }
 
     .service1 h6, .service2 h6, .service3 h6{
@@ -393,7 +508,8 @@
         top: 9px;
     }
 
-/*Termina MIS SERVICIOS y empieza MIS HABILIDADES------------------------------------------*/
+
+    /*Termina ACERCA DE MI empieza MI HABILIDADES------------------*/
 
     .aside2 {
         grid-column: 1/6;
@@ -403,7 +519,6 @@
         grid-template-columns: repeat(5, auto);
         grid-template-rows: repeat(12, auto);
     }
-
 
     .aside2 h3 {
         grid-column: 3/4;
@@ -415,8 +530,6 @@
         margin-top: 40px;
     }
 
-
-
     .skill-bars {
         grid-column: 3/4;
         display: grid;
@@ -424,17 +537,18 @@
         grid-template-rows: repeat(10, auto);
     }
 
-
     .skill1 {
         grid-column: 3/4;
         grid-row: 3/4;
         color: var(--color-h2);
     }
+
     .skill2 {
         grid-column: 3/4;
         grid-row: 5/6;
         color: var(--color-h2);
     }
+
     .skill3 {
         grid-column: 3/4;
         grid-row: 7/8;
@@ -442,28 +556,26 @@
     }
 
 
-
     .porcentaje1 {
-
         grid-column: 3/4;
         grid-row: 3/4;
         color: var(--color-H1);
         margin-left: 180px;
     }
+
     .porcentaje2 {
         grid-column: 3/4;
         grid-row: 5/6;
         color: var(--color-H1);
         margin-left: 200px;
     }
+
     .porcentaje3 {
         grid-column: 3/4;
         grid-row: 7/8;
         color: var(--color-H1);
         margin-left: 145px;
     }
-
-
 
 
     .progress-bar1 {
@@ -476,6 +588,7 @@
         margin-bottom: 60px;
         position: relative;
     }
+
     .progress-bar2 {
         grid-column: 3/4;
         grid-row: 6/7;
@@ -486,6 +599,7 @@
         margin-bottom: 60px;
         position: relative;
     }
+
     .progress-bar3 {
         grid-column: 3/4;
         grid-row: 8/9;
@@ -499,7 +613,7 @@
 
 
 
-    .progress-bar1::before, .progress-bar2::before, .progress-bar3::before {
+    .progress-bar1::before {
         content: attr(data-label);
         display: flex;
         align-items: center;
@@ -510,12 +624,44 @@
         width: calc(var(--width, 0)*1%);
         min-width: 2rem;
         max-width: calc(100%-1rem);
-        background-color: var(--color-H1);
+        background-color: #34B0BE;
         border-radius: 1em;
         padding-left: 1em;
     }
 
-/*Termina MIS HABILIDADES y empieza MI PORTAFILIO--------------------------------*/
+    .progress-bar2::before {
+        content: attr(data-label);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: .01em;
+        top: .01em;
+        bottom: .01rem;
+        width: calc(var(--width, 0)*1%);
+        min-width: 2rem;
+        max-width: calc(100%-1rem);
+        background-color: #34B0BE;
+        border-radius: 1em;
+        padding-left: 1em;
+    }
+
+    .progress-bar3::before {
+        content: attr(data-label);
+        display: flex;
+        align-items: center;
+        position: absolute;
+        left: .01 em;
+        top: .01em;
+        bottom: .01rem;
+        width: calc(var(--width, 0)*1%);
+        min-width: 2rem;
+        max-width: calc(100%-1rem);
+        background-color: #34B0BE;
+        border-radius: 1em;
+        padding-left: 1em;
+    }
+
+    /*Termina MIS HABILIDADES empiza PORTAFOLIO------------------*/
 
     .aside3 {
         grid-column: 1/6;
@@ -543,6 +689,7 @@
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(6, auto);
+
     }
 
     .aside3 .briefcase::-webkit-scrollbar {
@@ -560,32 +707,90 @@
     }
 
     .aside3 .briefcase ul {
-        grid-column: 1/6;
+        grid-column: 1/4;
+        position: relative;
         grid-row: 2/6;
         display: flex;
-        margin-left: 5px;
-        animation: cambio 3s infinite alternate;
+    }
+
+    @media screen and (min-width: 1000px) {
+
+        #photo {
+            width: 340px;
+            grid-column: 3/4;
+            grid-row: 1/6;
+            margin-left: 70px;
+            margin-top: 15px;
+        }
+
+        .wallpaper .item-2 {
+            border-radius: 100%;
+            background: var(--color-fondo2);
+            width: 450px;
+            height: 450px;
+            grid-column: 3/4;
+            grid-row: 1/6;
+            align-items: center;
+            margin-top: 9px;
+        }
+
+        .aside3 .briefcase {
+            grid-column: 2/5;
+            grid-row: 2/5;
+            overflow-x: scroll;
+            scroll-snap-type: x proximity;
+            margin: auto;
+            display: grid;
+            grid-template-columns: repeat(5, auto);
+            grid-template-rows: repeat(6, auto);
+            overflow: hidden;
+
+        }
+
+        .aside3 .briefcase::-webkit-scrollbar {
+            width: 12px;
+        }
+
+        .aside3 .briefcase::-webkit-scrollbar-track {
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+
+        .aside3 .briefcase::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+        }
 
 
+        .aside3 .briefcase ul {
+            grid-column: 2/6;
+            grid-row: 2/6;
+            display: flex;
+        }
     }
 
     .briefcase li {
+
         list-style: none;
         padding: 10px;
     }
+
     .briefcase li #experiencia1 {
         width: 300px;
     }
+
     .briefcase li #experiencia2 {
         width: 300px;
     }
+
     .briefcase li #experiencia3 {
         width: 300px;
     }
-/*Termina MI PORTAFOLIO y empieza CONTACTO--------------------------------*/
+
+/*Termina PORTAFOLIO empieza CONTACTO--------------------------*/
 
     .aside4 {
-        grid-column: 1/7;
+        grid-column: 1/6;
         grid-row: 8/9;
         width: 100%;
         margin-top: 40px;
@@ -597,38 +802,38 @@
         grid-row: 1/2;
         font-size: 32px;
         font-weight: 400;
-        color: #34B0BE;
+        color: var(--color-H1);
         text-align: center;
         margin-bottom: 40px;
     }
 
     .aside4 .asidecont4 {
-        grid-column: 1/6;
+        grid-column: 1/8;
         grid-row: 8/9;
         display: grid;
-        grid-template-columns: auto auto auto auto auto auto;
+        grid-template-columns: auto 200px 200px auto;
         grid-template-rows: auto auto auto;
     }
 
     .iconphone img,
     .iconemail img {
-
         width: 100px;
         height: 100px;
         position: relative;
+        top: 20px;
     }
 
 
     .iconphone {
-        grid-column: 3/4;
+        grid-column: 2/3;
         grid-row: 1;
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         background-color: white;
         border-radius: 5%;
         position: relative;
         text-align: center;
-        background: url(/assest/Vectores/Ellipse\ 14.svg) no-repeat white;
+        background: url(/portafolio/Ellipse\ 14.svg) no-repeat white;
         background-position: 0 -50px;
         background-size: 100% 100%;
     }
@@ -637,19 +842,26 @@
         color: #D1ceca;
         position: relative;
         text-align: center;
+        top: 10%;
     }
+
+    .aside4 .iconphone h4 {
+        position: relative;
+        text-align: center;
+        top: 10%;
+    }
+
 
     .iconemail {
         grid-column: 4/5;
         grid-row: 2;
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         background-color: white;
-        margin-left: auto;
         border-radius: 5%;
         position: relative;
         text-align: center;
-        background: url(/assest/Vectores/Ellipse\ 14.svg) no-repeat white;
+        background: url(/portafolio/Ellipse\ 14.svg) no-repeat white;
         background-position: 0 -50px;
         background-size: 100% 100%;
     }
@@ -660,8 +872,15 @@
         width: 100%;
         color: #D1ceca;
         text-align: center;
+        top: 10%;
     }
-/*Termina CONTACTO y emieza el FOOTER--------------------------------------*/
+
+    .aside4 .iconemail h4 {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        top: 10%;
+    }
 
     footer {
         grid-column: 1/6;
@@ -676,7 +895,7 @@
 
     }
 
-    footer > h6 {
+    footer>h6 {
         margin-top: 15px;
     }
 }

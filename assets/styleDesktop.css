@@ -462,7 +462,7 @@
         margin: auto;
         width: 230px;
         height: 260px;
-        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat top white;
+        background: url(./assets/images/Ellipse\ 14.svg) no-repeat top white;
         border-radius: 3%;
         text-align: center;
     }
@@ -474,7 +474,7 @@
         margin: auto;
         width: 230px;
         height: 260px;
-        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat top white;
+        background: url(./assets/images/Ellipse\ 14.svg) no-repeat top white;
         border-radius: 3%;
         background-color: white;
     }
@@ -486,7 +486,7 @@
         margin: auto;
         width: 230px;
         height: 260px;
-        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat top white;
+        background: url(./assets/images/Ellipse\ 14.svg) no-repeat top white;
         border-radius: 3%;
         background-color: white;
     }
@@ -833,7 +833,7 @@
         border-radius: 5%;
         position: relative;
         text-align: center;
-        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat white;
+        background: url(./assets/images/Ellipse\ 14.svg) no-repeat white;
         background-position: 0 -50px;
         background-size: 100% 100%;
     }
@@ -861,7 +861,7 @@
         border-radius: 5%;
         position: relative;
         text-align: center;
-        background: url(/portafolio/assets/images/Ellipse\ 14.svg) no-repeat white;
+        background: url(./assets/images/Ellipse\ 14.svg) no-repeat white;
         background-position: 0 -50px;
         background-size: 100% 100%;
     }
